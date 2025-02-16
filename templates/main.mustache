@@ -21,27 +21,38 @@
 
     Example context (json):
     {
-        "coursecode": 1
+        "coursecode": 1,
+        "btnlabel": "",
     }
 }}
 
-<div id="block-leganto-{{uniqid}}">
+<button class="btn btn-primary" id="init-leganto-btn">{{btnlabel}}</button>
+
+<div style="display:none" id="block-leganto-{{uniqid}}">
     {{> block_leganto/placeholder }}
 </div>
+
 {{#js}}
 require(
-[
-    'jquery',
-    'block_leganto/main'
-],
-function(
-    $,
-    main
-) {
-    var root = $('#block-leganto-{{uniqid}}');
-    var course = '{{coursecode}}';
-    var noListAvailable = '{{nolistavailable}}';
+    [
+        'jquery',
+        'block_leganto/main'
+    ],
+    function(
+        $,
+        main
+    ) {
+        $('#init-leganto-btn').on('click', function() {
+            var root = $('#block-leganto-{{uniqid}}');
+            var button = $('#init-leganto-btn');
+            button.toggle();
+			root.toggle();
+            
+            var course = '{{coursecode}}';
+            var noListAvailable = '{{nolistavailable}}';
 
-    main.init(root, course, noListAvailable);
-});
+            main.init(root, course, noListAvailable);
+        });
+    }
+);
 {{/js}}
