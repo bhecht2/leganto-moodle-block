@@ -38,6 +38,8 @@ $string['config_sortByName'] = 'Name';
 $string['config_sortByModification'] = 'Modification date';
 $string['config_sortBy'] = 'Sort lists by';
 $string['config_buttonLabel'] = 'Check the resource list for this course';
+$string['config_buttonTitle'] = 'Resource list';
+$string['config_buttonDesc'] = 'The label of the button to display reading lists info in block';
 
 $string['config_sortAscending'] = 'Ascending';
 $string['config_sortDescending'] = 'Descending';
@@ -47,7 +49,6 @@ $string['config_authSaml'] = 'SAML';
 $string['config_authCas'] = 'CAS';
 $string['config_authSetting'] = 'Authentication method';
 $string['config_debugSetting'] = 'Debug mode';
-$string['config_buttonDesc'] = 'Resource list';
 
 $string['config_useCache'] = 'Use cache';
 $string['config_useCacheDesc'] = 'When this option is turned on, the reading list will be cached until the expiry time below is reached';
