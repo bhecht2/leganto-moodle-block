@@ -50,6 +50,7 @@ class main implements renderable, templatable {
         $course_code = $COURSE->idnumber == NULL ? $COURSE->fullname : $COURSE->idnumber;
         $variables = [
             'coursecode' => $course_code,
+            'btnlabel' => get_config('leganto', 'buttonLabel'),
             'nolistavailable' => get_config('leganto', 'noListAvailable')
         ];
 
