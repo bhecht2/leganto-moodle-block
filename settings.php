@@ -48,5 +48,5 @@ $settings->add(new admin_setting_configtext('leganto/cacheExpiration',get_string
 
 $settings->add(new admin_setting_configcheckbox('leganto/debug', get_string('config_debugSetting', 'block_leganto'),'', 0));
 
-
+$settings->add(new admin_setting_configtext('leganto/buttonLabel',get_string('config_buttonTitle', 'block_leganto'), get_string('config_buttonDesc', 'block_leganto') , 'Check the resource list for this course'));
 
